@@ -1,0 +1,98 @@
+<!Doctype HTML>
+<html>
+<head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+        <div id = "AddBtn">
+                <b>Employment History</b>
+                <label>Employers Name</label><input type="text" style="width:100%; padding:12px 20px; margin: 8px 0; box-sizing: border-box; " /><br />
+                <label>Job Position</label><input type="text" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;  " /><br /> 
+                <label>Job Description</label><input type="text" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;" /><br />
+                <label>Start Date</label><input type="date" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;" /> 
+                 <label>End Date</label><input type = "date" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;"><br /> 
+            
+                
+            </div>  
+            <button type="button" class="new_btn" >Add</button> 
+
+            <script> 
+
+                
+                jQuery.noConflict();
+              
+            
+            jQuery(document).ready(function(){ 
+                var max_fields =3
+            var add_B = jQuery(".new_btn");
+                var x =1;
+                jQuery(add_B).click(function(e){
+            e.preventDefault();
+            
+            if(x < max_fields){
+                x++; 
+
+
+                  jQuery("#AddBtn").append( '<label>Employers Name</label>' + '<input type="text" style="width:100%; padding:12px 20px; margin: 8px 0; box-sizing: border-box; " /><br />'
+        
+        + ' <label> Job Position</label> ' +'<input type="text" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;  " /><br /> ' 
+
+        + '<label> Job Description</label>' + '<input type="text" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;" /><br />' 
+        + ' <label> Date</label>' + '<input type="date" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;" /> '
+        +'<label> End Date</label>' + '<input type = "date" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;"><br /> '); 
+            } 
+
+            else{
+                alert("You can only enter three Employment History")
+            }
+
+            })
+
+            }
+            
+            
+            
+            )
+
+            </script>
+            
+
+
+
+            <div id = "Abtn">
+                <label>Certification</label><input type="text" style="width:100%; padding:12px 20px; margin: 8px 0; box-sizing: border-box; " />
+            
+            </div>
+            
+            <button type="button" class ="jk_btn">Click here to add more available certification </button>
+            
+            <script>
+              
+
+                jQuery(document).ready(function(){ 
+            var add_B = jQuery(".jk_btn");
+        
+                jQuery(add_B).click(function(e){
+            e.preventDefault();
+            
+            
+
+
+             jQuery("#Abtn").append('<input type="text" style="width:100%; padding:12px 20px; margin: 8px 0; box-sizing: border-box; " /><br />'); 
+            
+
+            })
+
+            }
+            
+            )
+                 
+                    </script> 
+</body>
+
+</html>
+
+
