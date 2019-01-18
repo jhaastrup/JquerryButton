@@ -7,7 +7,8 @@
 
 </head>
 <body>
-        <div id = "AddBtn">
+        <div id = "AddBtn"> 
+            <!--input fields -->
                 <b>Employment History</b>
                 <label>Employers Name</label><input type="text" style="width:100%; padding:12px 20px; margin: 8px 0; box-sizing: border-box; " /><br />
                 <label>Job Position</label><input type="text" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;  " /><br /> 
@@ -19,23 +20,24 @@
             </div>  
             <button type="button" class="new_btn" >Add</button> 
 
+         <!-- script to dynamically add new fields when the add button is clicked. -->
             <script> 
 
-                
+            //using the noConflict() function to overide any jquery already on the page.
                 jQuery.noConflict();
               
             
             jQuery(document).ready(function(){ 
-                var max_fields =3
+                var max_fields =3 //setting maxmimum number of addable new fields to 3
             var add_B = jQuery(".new_btn");
                 var x =1;
                 jQuery(add_B).click(function(e){
             e.preventDefault();
             
-            if(x < max_fields){
+            if(x < max_fields){ //if trying to add fields increament field.
                 x++; 
 
-
+                  //appending the new fields to the body of my page
                   jQuery("#AddBtn").append( '<label>Employers Name</label>' + '<input type="text" style="width:100%; padding:12px 20px; margin: 8px 0; box-sizing: border-box; " /><br />'
         
         + ' <label> Job Position</label> ' +'<input type="text" style="width:100%; padding:12px 20px; margin:8px 0; box-sizing: border-box;  " /><br /> ' 
@@ -46,7 +48,7 @@
             } 
 
             else{
-                alert("You can only enter three Employment History")
+                alert("You can only enter three Employment History") //maximum of 3 fields allowed kick user out.
             }
 
             })
